@@ -8,9 +8,13 @@
 /* Activity 1 */
 /* Set Up a Flex Container so that the items within .blockDivs are flex items oriented in a vertical direction */
 
+
 .blockDivs {
   color: var(--text);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+
 }
 .blockDivs > * {
   border: 1px solid;

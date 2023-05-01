@@ -6,7 +6,7 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
 // Event Listener for Form
 const form = document.querySelector("form");
 if (form) {
-  form.addEventListener("submit", event => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("The form was submitted!");
 
@@ -18,7 +18,7 @@ if (form) {
     // Notice how in the console, it says "HTMLFormControlsCollection". HTMLCollection
 
     // NOTE: In order to iterate through an "array-like" object like a HTMLFormControlsCollection, we must convert it to an array. We can do this using Array.from() as shown bellow
-    Array.from(inputs).forEach(input => {
+    Array.from(inputs).forEach((input) => {
       console.log(
         `This input is named ${input.name} and has a value of ${input.value}`
       );
@@ -44,10 +44,10 @@ const blocks = [
   { order: 14, text: "Sed a risus posuere, rutrum orci" },
   { order: 15, text: "Sed sollicitudin in eros non pulvinar" },
   { order: 16, text: "Nullam nisl ante, blandit vel" },
-  { order: "LAST", text: "posuere justo vitae urna" }
+  { order: "LAST", text: "posuere justo vitae urna" },
 ];
 function addItemsToBlock() {
-  blocks.forEach(block => {
+  blocks.forEach((block) => {
     const newTR = document.createElement("tr");
     const newTD = document.createElement("td");
     newTR.textContent = `${block.order}`;
